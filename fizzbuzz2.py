@@ -2,7 +2,7 @@
 def fizzbuzz(n):
     '''An alternate version of Fizzbuzz'''
 
-    if n % 3 == 0 and n % 5 == 0:
+    if n % 15 == 0:
         return 'fizzbuzz'
     elif n % 3 == 0:
         return 'fizz'
