@@ -1,3 +1,3 @@
 # examples-py
 
-Python examples
+These are examples of Python code.
