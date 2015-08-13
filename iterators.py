@@ -1,5 +1,24 @@
 #!/usr/bin/env python
 
+class Counter:
+    """Return numbers between two numbers (inclusive)."""
+    def __init__(self, first, last):
+        """Initialize counter."""
+        self.current = first
+        self.last = last
+
+    def __iter__(self):
+        """Return self as an iterator instance."""
+        return self
+
+    def next(self):   # __next__ in Python 3!
+        """Return next number."""
+        if self.current <= self.last:
+            self.current += 1
+            return self.current - 1
+        else:
+            raise StopIteration
+
 class fwd_iter():
     """Iterate over a list"""
 
@@ -39,12 +58,18 @@ class rev_iter():
             raise StopIteration()
 
 def main():
+    print "Running reverse iterator"
     lst = [1, 2, 3, 4]
     ri = rev_iter(lst)
     print ri.next()
     print ri.next()
     print ri.next()
-    print ri.next()    
+    print ri.next()
+
+    print "Running Counter iterator"
+    c = Counter(1, 5)
+    for i in c:
+        print "%s " % i
 
 if __name__ == '__main__':
     main()
