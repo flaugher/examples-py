@@ -11,6 +11,18 @@ and return one piece of data at a time.
 Note that these generators are not reusable.
 
 """
+def generator_expression():
+    """Generate squares of a list of numbers."""
+    print "Running list expression"
+    print [x*x for x in range(1, 5)]
+
+    print "Running a generator expression"
+    # Generator expressions are like list expressions except
+    # that they're enclosed in round brackets instead of square ones
+    ge = (x*x for x in range(1, 5))
+    for i in ge:
+        print i
+
 def infinite_generator(start=1):
     """Generate an infinite set of numbers."""
     while True:
@@ -49,6 +61,7 @@ def main():
     """Main"""
     run_simple()
     run_counter()
+    generator_expression()
 
 if __name__ == "__main__":
     main()
