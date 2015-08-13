@@ -8,6 +8,8 @@ eliminate the need save all the generated data in
 memory all at once.  The generator will "generate"
 and return one piece of data at a time.
 
+Note that these generators are not reusable.
+
 """
 def infinite_generator(start=1):
     """Generate an infinite set of numbers."""
