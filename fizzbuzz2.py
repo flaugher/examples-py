@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 def fizzbuzz(n):
     '''An alternate version of Fizzbuzz'''

@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-
 class fwd_iter():
     """Iterate over a list"""
 

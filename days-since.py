@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Print number of days and weeks since your surgery."""
+'''Print number of days since a date.'''
 
 from datetime import date
 
