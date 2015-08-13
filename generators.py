@@ -1,12 +1,27 @@
 #!/usr/bin/env python
 
-"""Examples of Python generators"""
+"""Examples of Python generators
+
+Generators are good for performing "lazy" evaluations
+when you're working with lots of data.  Generators 
+eliminate the need save all the generated data in 
+memory all at once.  The generator will "generate"
+and return one piece of data at a time.
+
+"""
+def infinite_generator(start=1):
+    """Generate an infinite set of numbers."""
+    while True:
+        yield start
+        start += 1
 
 def counter_generator(first, last):
     """Generator that returns a counter."""
     print "Inside the counter generator"
     current = first
     while current <= last:
+        # Return ("yield") current value, increment current,
+        # and suspend state until next iteration
         yield current
         current += 1
 
