@@ -31,8 +31,8 @@ class my_iter:
             raise StopIteration
 
 def main():
-    """Main"""
-    pass
+    '''Main'''
+    print my_iter(5)
 
 if __name__ == "__main__":
     main()
