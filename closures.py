@@ -2,6 +2,16 @@
 # -*- coding: utf-8 -*-
 import os, sys
 
+def make_adder(num):
+    def add_to(n):
+        return num + n
+    return add_to
+
+def call_make_adder():
+    print "Calling make_adder"
+    add10 = make_adder(10)
+    print add10(1)  # => 11
+
 def make_power(n):
     """Define a closure that raises a number to the power of n."""
     def nth_power(x):
@@ -9,10 +19,14 @@ def make_power(n):
     return nth_power
 
 def call_make_power():
+    print "Calling make_power"
     squared = make_power(2)
     print squared(2)
     cubed = make_power(3)
     print cubed(2)
+    # Note that you could delete make_power from the namespace
+    # at this point and the squared and cubed closures would 
+    # still work!
 
 def make_inc(x):
     """Increment a number by another number.
@@ -35,6 +49,7 @@ def make_inc(x):
 def call_make_inc():
     # This creates a closure function called "inc5" that always
     # increments the number passed to it by 5
+    print "Calling make_inc"
     inc5 = make_inc(5)
     print inc5(5)
 
@@ -46,6 +61,7 @@ def call_make_inc():
 def main():
     call_make_inc()
     call_make_power()
+    call_make_adder()
 
 if __name__ == "__main__":
     main()
