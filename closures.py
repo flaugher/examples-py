@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import os, sys
 
 def make_adder(num):
     def add_to(n):
