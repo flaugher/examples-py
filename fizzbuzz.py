@@ -11,22 +11,23 @@ def fizzbuzz():
     of the number.
 
     '''
-    for n in range(1, 101):
-        if n % 3 == 0:
-            output = "fizz"
-            if n % 5 == 0:
-                output += "buzz"
-        elif n % 5 == 0:
-            output = "buzz"
-            if n % 3 == 0:
-                output = "fizz" + output
+def fizzbuzz(n):
+    assert n > 0, "n is less than lower bound %d" % 1
+    assert n <= 1000, "n exceeds upper bound %d" % 1000
+
+    for i in range(1, n+1):
+        if i % 15 == 0:
+            print "Fizzbuzz"
+        elif i % 3 == 0:
+            print "Fizz"
+        elif i % 5 == 0:
+            print "Buzz"
         else:
-            output = n
-        print output
+            print i
 
 def main():
     '''Main'''
-    fizzbuzz()
+    fizzbuzz(25)
 
 if __name__ == "__main__":
     main()
